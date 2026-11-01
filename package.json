@@ -1,0 +1,25 @@
+{
+  "name": "deepvalues-mcp",
+  "version": "0.1.0",
+  "description": "Local stdio MCP server for the DeepValues API: 13F guru holdings, intrinsic value, SEC filings, sentiment and AI grounding context for US stocks. Proxies the hosted MCP endpoint so stdio-only hosts (Claude Desktop, Cursor) can use it.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "deepvalues-mcp": "dist/index.js" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": ["mcp", "model-context-protocol", "investing", "13F", "intrinsic-value", "SEC", "agents"],
+  "repository": { "type": "git", "url": "https://github.com/IvyFan19/deepvalues-mcp" },
+  "homepage": "https://app.deepvalues.ai/developers",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
